@@ -16,19 +16,19 @@ function Footer() {
               Главная
             </Link>
           </li>
-          <li className="footer__list">
+          <li>
             <a className="footer__link" href="https://praktikum.yandex.ru" target="_blank" rel="noreferrer">
               Яндекс.Практикум
             </a>
           </li>
         </ul>
         <ul className="footer__socials">
-          <li className="footer__list">
+          <li>
             <a href="https://github.com/" target="_blank" rel="noreferrer">
               <img className="footer__link-social" src={githubIcon} alt="GitHub" />
             </a>
           </li>
-          <li className="footer__list">
+          <li>
             <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
               <img className="footer__link-social" src={facebookIcon} alt="Facebook" />
             </a>

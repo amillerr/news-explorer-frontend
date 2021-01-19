@@ -45,8 +45,9 @@
   width: 608px;
   height: 64px;
   padding-left: 24px;
-  outline: none;
 }
+
+
 
 .search__form_button {
   width: 168px;
@@ -65,7 +66,6 @@
   align-items: center;
   text-align: center;
   color: #FFFFFF;
-  outline: none;
   border: none;
   cursor: pointer;
 }
