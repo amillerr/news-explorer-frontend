@@ -23,7 +23,9 @@ function MobileNav(props) {
       <div className="popup__mobile-nav">
         <Navigation
           onLogin={props.onLogin}
-          onClose={props.onClose}/>
+          onClose={props.onClose}
+          loggedIn={props.loggedIn}
+        />
       </div>
     </section>
   );

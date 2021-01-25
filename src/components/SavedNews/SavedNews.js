@@ -9,9 +9,21 @@ function SavedNews(props) {
     <div className="saved-news">
       <Header
         onLogin={props.onLogin}
-        isMobileMenu={props.isMobileMenu} />
-      <SavedNewsHeader />
-      <SavedNewsList />
+        isMobileMenu={props.isMobileMenu}
+        loggedIn={props.loggedIn}
+        name={props.name}
+        onSignOut={props.onSignOut}
+      />
+      <SavedNewsHeader
+        keyword={props.keyword}
+        myArticles={props.myArticles}
+      />
+      <SavedNewsList
+        keyword={props.keyword}
+        myArticles={props.myArticles}
+        loggedIn={props.loggedIn}
+        deleteSavedNews={props.deleteSavedNews}
+      />
       <Footer />
     </div>
   );

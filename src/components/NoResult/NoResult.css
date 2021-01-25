@@ -7,6 +7,10 @@
   align-items: center;
 }
 
+.no-result__hidden {
+  display: none;
+}
+
 .no-result__icon{
   width: 96px;
   height: 96px;

@@ -2,6 +2,12 @@ import React from 'react';
 import PopupWithForm from '../PopupWithForm/PopupWithForm';
 
 function Login(props) {
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    props.onLogin(props.inputValue.email, props.inputValue.password);
+  }
+
   return (
     <PopupWithForm
       name='login'
@@ -11,9 +17,10 @@ function Login(props) {
       isOpen={props.isOpen}
       onClose={props.onClose}
       isValid={props.isValid}
-      onClickLink={props.onClickLink}>
-    <div className='popup__field'>
-      <label className="popup__label">Email</label>
+      onClickLink={props.onClickLink}
+      onSubmit={handleSubmit}>
+      <div className='popup__field'>
+        <label className="popup__label">Email</label>
         <input
           className="popup__input popup__input_email"
           name="email"
@@ -21,12 +28,10 @@ function Login(props) {
           value={props.inputValue.email || ''}
           onChange={props.onChangeValid}
           placeholder="Введите почту"
-          minLength="6"
-          maxLength="30"
           required
         />
         <span className="popup__input-error">{props.inputError.email}</span>
-    </div>
+      </div>
       <div className="popup__field">
         <p className="popup__label">Пароль</p>
         <input
@@ -42,7 +47,7 @@ function Login(props) {
         />
         <span className="popup__input-error">{props.inputError.password}</span>
       </div>
-      <span className="popup__submit-error"/>
+      <span className="popup__submit-error">{props.submitError}</span>
     </PopupWithForm>
 
   );

@@ -19,6 +19,10 @@
   color: #1A1B22;
 }
 
+.nav__block-hidden{
+  display: none;
+}
+
 .nav__button-auth {
   text-decoration: none;
   border: 1px solid #FFFFFF;
@@ -33,7 +37,9 @@
   border: 1px solid #1A1B22;
   color: #1A1B22;
 }
-
+.nav__button-logout{
+  margin-left: 8px;
+}
 .nav__link_active {
   border-bottom: solid #FFFFFF 3px;
 }

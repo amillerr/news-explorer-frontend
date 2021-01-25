@@ -18,6 +18,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .preloader__text{
   font-family: 'Roboto', 'Arial', sans-serif;
   font-style: normal;
@@ -39,5 +40,9 @@
   border-radius: 50%;
   position: absolute;
   animation: spin .75s infinite linear;
+}
+
+.preloader_hidden{
+  display: none;
 }
 

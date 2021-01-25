@@ -6,6 +6,10 @@
   flex-direction: column;
 }
 
+.news-list__hidden{
+  display: none;
+}
+
 .news-list__title{
   margin: 0;
   font-family: 'Roboto Slab', 'Arial', sans-serif;
