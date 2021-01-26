@@ -244,7 +244,7 @@ function App() {
           <Route exact path="/">
 
             <Main
-              onMobileMenu={handleMobileNav}
+              isMobileMenu={handleMobileNav}
               onLogin={handleSignIn}
               isPopupOpen={loginOpen || registerOpen || infoTooltipOpen}
               loggedIn={loggedIn}
@@ -261,7 +261,7 @@ function App() {
             />
           </Route>
           <ProtectedRoute exact path="/saved-news" loggedIn={loggedIn} component={SavedNews}
-                          onMobileMenu={handleMobileNav}
+                          isMobileMenu={handleMobileNav}
                           onLogin={handleSignIn}
                           name={currentUser}
                           onSignOut={onSignOut}

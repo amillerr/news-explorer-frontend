@@ -19,9 +19,7 @@ function Header(props) {
         onSignOut={props.onSignOut}
       />
       <button
-        className={`${pathname === '/' && 'header__mobile-menu header__mobile-menu_light'} 
-        ${pathname === '/saved-news' && 'header__mobile-menu header__mobile-menu_dark'} 
-        ${props.isOpenPopup && 'header__mobile-menu_hidden'} `}
+        className={`${pathname === '/' && 'header__mobile-menu header__mobile-menu_light'} ${pathname === '/saved-news' && 'header__mobile-menu header__mobile-menu_dark'} ${props.isOpenPopup && 'header__mobile-menu_hidden'} `}
         onClick={props.isMobileMenu}
       />
     </header>
