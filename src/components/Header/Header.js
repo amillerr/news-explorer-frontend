@@ -8,9 +8,7 @@ function Header(props) {
 
   return (
     <header className={`header ${pathname === '/saved-news' && 'header__dark'}`}>
-      <Link to='/' className={`header__logo ${pathname === '/saved-news' && 'header__logo_dark'}`}>
-        NewsExplorer
-      </Link>
+      <Link className={`header__logo ${pathname === '/saved-news' && 'header__logo_dark'}`} to="/">NewsExplorer</Link>
       <Navigation
         onLogin={props.onLogin}
         isMobileMenu={props.isMobileMenu}

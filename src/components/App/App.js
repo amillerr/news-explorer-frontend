@@ -246,13 +246,13 @@ function App() {
             <Main
               isMobileMenu={handleMobileNav}
               onLogin={handleSignIn}
-              isPopupOpen={loginOpen || registerOpen || infoTooltipOpen}
+              isOpenPopup={loginOpen || registerOpen || infoTooltipOpen}
               loggedIn={loggedIn}
               name={currentUser}
               onSignOut={onSignOut}
               onSearchNews={handleSearchNews}
               isPreloader={preloader}
-              isMainNoResults={noResult}
+              isNoResult={noResult}
               articles={articles}
               keyword={keyword}
               mySavedNews={handleSaveNews}
@@ -260,20 +260,21 @@ function App() {
               myArticles={myArticles}
             />
           </Route>
-          <ProtectedRoute exact path="/saved-news" loggedIn={loggedIn} component={SavedNews}
-                          isMobileMenu={handleMobileNav}
-                          onLogin={handleSignIn}
-                          name={currentUser}
-                          onSignOut={onSignOut}
-                          myArticles={myArticles}
-                          articles={articles}
-                          keyword={keyword}
-                          deleteSavedNews={handleArticleDelete}>
-
+          <ProtectedRoute exact path="/saved-news" 
+            loggedIn={loggedIn} 
+            component={SavedNews}
+            isMobileMenu={handleMobileNav}
+            onLogin={handleSignIn}
+            name={currentUser}
+            onSignOut={onSignOut}
+            myArticles={myArticles}
+            articles={articles}
+            keyword={keyword}
+            deleteSavedNews={handleArticleDelete}>
           </ProtectedRoute>
         </Switch>
         <Route path="*">
-          {loggedIn ? <Redirect to="/saved-news" /> : <Redirect to="/" /> }
+          {loggedIn ? <Redirect to="/" /> : <Redirect to="/saved-news" /> }
         </Route>
         <Login
           isOpen={loginOpen}

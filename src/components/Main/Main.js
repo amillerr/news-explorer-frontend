@@ -14,8 +14,8 @@ function Main(props) {
         onLogin={props.onLogin}
         isMobileMenu={props.isMobileMenu}
         isOpenPopup={props.isOpenPopup}
-        name={props.name}
         loggedIn={props.loggedIn}
+        name={props.name}
         onSignOut={props.onSignOut}
       />
       <SearchForm
@@ -28,13 +28,13 @@ function Main(props) {
         isNoResult={props.isNoResult}
       />
       <NewsCardList
+        articles={props.articles}
+        keyword={props.keyword}
         loggedIn={props.loggedIn}
         onLogin={props.onLogin}
-        articles={props.articles}
-        myArticles={props.myArticles}
-        keyword={props.keyword}
         mySavedNews={props.mySavedNews}
         deleteSavedNews={props.deleteSavedNews}
+        myArticles={props.myArticles}
       />
       <About />
       <Footer />

@@ -37,9 +37,7 @@ function NewsCard(props) {
           (
             <>
               <button
-                className={`news-card__button 
-                ${pathname === '/' && ' news-card__button-save'} 
-                ${pathname === '/saved-news' && 'news-card__button-trash'}`}
+                className={`news-card__button ${pathname === '/' && ' news-card__button-save'} ${pathname === '/saved-news' && 'news-card__button-trash'}`}
                 type="button"
                 onClick={props.onLogin} >
               </button>
@@ -50,9 +48,7 @@ function NewsCard(props) {
           (
             <>
               <button
-                className={`news-card__button 
-                ${pathname === '/' && !saved ? ' news-card__button-save' : ' news-card__button-save_active'} 
-                ${pathname === '/saved-news' && 'news-card__button-trash'}`}
+                className={`news-card__button ${pathname === '/' && !saved ? ' news-card__button-save' : ' news-card__button-save_active'} ${pathname === '/saved-news' && 'news-card__button-trash'}`}
                 type="button"
                 onClick={pathname === '/' && !saved ?  handleClick : props.deleteSavedNews}
               >

@@ -1,7 +1,7 @@
 import React from 'react';
 import noResultIcon from '../../images/no-result.svg';
 
-function NoResults(props) {
+function NoResult(props) {
   return (
     <div className={`${props.isNoResult ? "no-result" : "no-result__hidden"}`}>
       <img className="no-result__icon" src={noResultIcon} alt="No Result" />
@@ -11,4 +11,4 @@ function NoResults(props) {
   );
 }
 
-export default NoResults;
+export default NoResult;

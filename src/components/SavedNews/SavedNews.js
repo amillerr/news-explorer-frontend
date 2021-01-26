@@ -7,25 +7,25 @@ import Footer from '../Footer/Footer';
 function SavedNews(props) {
   return (
     <div className="saved-news">
-      <Header
-        onLogin={props.onLogin}
-        isMobileMenu={props.isMobileMenu}
-        loggedIn={props.loggedIn}
-        name={props.name}
-        onSignOut={props.onSignOut}
-      />
-      <SavedNewsHeader
-        keyword={props.keyword}
-        myArticles={props.myArticles}
-      />
-      <SavedNewsList
-        keyword={props.keyword}
-        myArticles={props.myArticles}
-        loggedIn={props.loggedIn}
-        deleteSavedNews={props.deleteSavedNews}
-      />
-      <Footer />
-    </div>
+          <Header
+            onLogin={props.onLogin}
+            isMobileMenu={props.isMobileMenu}
+            loggedIn={props.loggedIn}
+            name={props.name}
+            onSignOut={props.onSignOut}
+          />
+          <SavedNewsHeader 
+            myArticles={props.myArticles}
+            keyword={props.keyword}
+          />
+          <SavedNewsList
+            myArticles={props.myArticles}
+            keyword={props.keyword}
+            loggedIn={props.loggedIn}
+            deleteSavedNews={props.deleteSavedNews}
+          />
+            <Footer />
+        </div>
   );
 }
 
