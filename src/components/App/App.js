@@ -169,25 +169,18 @@ function App() {
 
   }
 
-  // function handleSaveNews({ keyword, title, text, date, source, link, image }) {
-  //   const jwt = getToken();
-  //   if (!jwt) {
-  //     return;
-  //   }
-  //   return mainApi.saveArticle({ keyword, title, text, date, source, link, image }, jwt)
-  //     .then((res) => {
-  //       setMyArticles([...myArticles, res,]);
-  //     })
-  //     .catch((err) => console.log('Request Error - ' + err))
-  // }
-
   function handleSaveNews({ keyword, title, text, date, source, link, image }) {
-    return mainApi.saveArticle({ keyword, title, text, date, source, link, image })
+    const jwt = getToken();
+    if (!jwt) {
+      return;
+    }
+    return mainApi.saveArticle({ keyword, title, text, date, source, link, image }, jwt)
       .then((res) => {
-        setMyArticles([res, ...myArticles]);
+        setMyArticles([...myArticles, res,]);
       })
-      .catch((error) => console.log('Ошибка запроса - ' + error))
+      .catch((err) => console.log('Request Error - ' + err))
   }
+
 
   const handleArticleDelete = () => {
     const jwt = getToken();

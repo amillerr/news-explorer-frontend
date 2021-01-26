@@ -67,14 +67,14 @@ export const getMyArticles = (token) => {
   })
     .then(getResponseData);
 }
-export const saveArticle = ( { keyword, title, text, date, source, link, image }) => {
+export const saveArticle = ( { keyword, title, text, date, source, link, image }, token) => {
   const article = { keyword, title, text, date, source, link, image };
-  return fetch(`${MAIN_URL}/article`, {
+  return fetch(`${MAIN_URL}/articles`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${localStorage.getItem('token')}`
+      'Authorization': `Bearer ${token}`
     },
     body: JSON.stringify(article)
   })
