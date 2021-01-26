@@ -16,11 +16,11 @@ function NewsCardList(props) {
     <section className={`${props.articles.length > 0 ? "news-list" : "news-list__hidden" }`} >
         <h3 className="news-list__title">Результаты поиска</h3>
         <div className="news-list__items">
-            {props.articles.slice(0, articlesCount).map((article, idnex) => (
+            {props.articles.slice(0, articlesCount).map((article, index) => (
                 <NewsCard
                 loggedIn={props.loggedIn}
                 onLogin={props.onLogin}
-                key={idnex}
+                key={index}
                 articles={props.articles}
                 keyword={props.keyword}
                 imageUrl={article.urlToImage}
