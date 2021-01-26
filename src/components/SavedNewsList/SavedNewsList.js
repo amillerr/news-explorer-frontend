@@ -8,7 +8,6 @@ function SavedNewsList(props) {
         {props.myArticles.map((article, index) => {
           return (
             <NewsCard
-              currentUser={props.currentUser}
               key={index}
               keyword={article.keyword}
               title={article.title}
