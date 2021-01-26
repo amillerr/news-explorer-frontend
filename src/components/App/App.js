@@ -256,7 +256,7 @@ function App() {
               articles={articles}
               keyword={keyword}
               mySavedNews={handleSaveNews}
-              deleteSaveNews={handleArticleDelete}
+              deleteSavedNews={handleArticleDelete}
               myArticles={myArticles}
             />
           </Route>
@@ -268,7 +268,7 @@ function App() {
                           myArticles={myArticles}
                           articles={articles}
                           keyword={keyword}
-                          deleteSaveNews={handleArticleDelete}>
+                          deleteSavedNews={handleArticleDelete}>
 
           </ProtectedRoute>
         </Switch>
