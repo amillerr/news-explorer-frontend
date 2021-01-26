@@ -195,7 +195,6 @@ function App() {
         setMyArticles(myArticles.filter((c) => c._id !== myArticlesId._id));
       })
       .catch((err) => console.log('Ошибка удаления карточки : ', err))
-
   }
 
   const articlesCheck = () => {
