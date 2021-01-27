@@ -1,0 +1,27 @@
+.popup__mobile-menu {
+  display: none;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .popup__mobile-menu {
+    display: block;
+  }
+  .popup__mobile-menu_header {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+    padding: 16px;
+    background: #1A1B22;
+  }
+  .popup__mobile-nav {
+    background: #1A1B22;
+  }
+  .popup__close-menu {
+    width: 24px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+    background: transparent url(../../images/mobile-close.svg) no-repeat center;
+  }
+}
